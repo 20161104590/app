@@ -10,19 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var result_1: UITextField!
-    
     @IBOutlet weak var result_2: UITextField!
-    
     @IBOutlet weak var result: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
     var re = 0
-    @IBAction func n_1(_ sender: Any) {
+    var judge = 0
+    var and = 0
+    var minus = 0
+    var times = 0
+    var divided = 0
+    
+    
+    @IBAction func n_1(_ sener: Any) {
         if re == 1{
             result.text = "1"
         }else{
@@ -85,6 +93,7 @@ class ViewController: UIViewController {
             result.text = result.text! + "8"
         }
     }
+    
     @IBAction func n_9(_ sender: Any) {
         if re == 1{
             result.text = "9"
@@ -101,7 +110,35 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func dot(_ sender: Any) {
+        result.text = result.text! + "."
+        judge = 1
+    }
     
     
+    
+    @IBAction func and(_ sender: Any) {
+    }
+    
+    @IBAction func minus(_ sender: Any) {
+    }
+    
+    @IBAction func times(_ sender: Any) {
+    }
+    
+    @IBAction func divided(_ sender: Any) {
+    }
+    
+    @IBAction func add(_ sender: Any) {
+    }
+    
+    @IBAction func clear(_ sender: Any) {
+        result.text = ""
+        and = 0
+        minus = 0
+        times = 0
+        divided = 0
+    }
 }
+
 
