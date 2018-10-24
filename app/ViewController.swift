@@ -101,12 +101,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func add(_ sender: Any) {
-    }
-    
-    @IBAction func minus(_ sender: Any) {
-    }
-    
     
     
 }
