@@ -24,11 +24,13 @@ class ViewController: UIViewController {
     
     var re = 0
     var judge = 0
-    var and = 0
+    var plus = 0
     var minus = 0
     var times = 0
     var divided = 0
-    
+    var x = 0
+    var number = 0
+    var add = 0
     
     @IBAction func n_1(_ sener: Any) {
         if re == 1{
@@ -117,24 +119,74 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func and(_ sender: Any) {
+    @IBAction func plus(_ sender: Any) {                   //加法运算
+        if add == 1{
+            let a = Double(result_1.text!)!
+            let b = Double(result.text!)!
+            let c = a + b
+            result_1.text = String(c)
+            result.text = ""
+            number = 2
+            re = 1
+        }else{
+            if result.text == ""{
+                result.text = "0"
+            }else {
+                let x = Double(result.text!)!
+                result_1.text = String(x)
+                result.text = ""
+                number = 2
+                re = 0
+                
+            }
+        }
+        
     }
     
     @IBAction func minus(_ sender: Any) {
+        
     }
+    
     
     @IBAction func times(_ sender: Any) {
+        
     }
     
+ 
     @IBAction func divided(_ sender: Any) {
     }
     
-    @IBAction func add(_ sender: Any) {
+  
+    @IBAction func equal(_ sender: Any) {
+        var d:Double
+        var c:Double
+        let x = Double(result_1.text!)!
+        c = (result.text! as NSString).doubleValue
+        if number == 1{
+            d = x - c
+        }else if number == 2{
+            d = x + c
+        }else if number == 3{
+            d = x * c
+        }else if number == 4{
+            d = x / (c)
+        }else {
+            d = 1000
+        }
+        result_2.text = String(c)
+        if judge == 1{
+            result.text = String(format:"%f",d)
+        }else {
+            result.text = String(format:"%.0f",d)
+        }
+        re = 1
+        judge = 0
+        add = 0
     }
     
     @IBAction func clear(_ sender: Any) {
         result.text = ""
-        and = 0
+        plus = 0
         minus = 0
         times = 0
         divided = 0

@@ -72,17 +72,6 @@
                                     <action selector="n_5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntQ-sn-fpU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoC-rD-5jW">
-                                <rect key="frame" x="94" y="480" width="93" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="8"/>
-                                <connections>
-                                    <action selector="n_8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKo-Lp-bLg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dr-fh-AHX">
                                 <rect key="frame" x="187" y="480" width="93" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -124,7 +113,7 @@
                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6l8-GC-1Be"/>
+                                    <action selector="equal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ge4-AV-NyG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuG-ef-Xil">
@@ -135,7 +124,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="and:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JO3-cx-Lhi"/>
+                                    <action selector="plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uEZ-jf-rq5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irR-LO-Dkw">
@@ -146,7 +135,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="-"/>
                                 <connections>
-                                    <action selector="minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUC-hJ-TVE"/>
+                                    <action selector="minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcX-q8-6C5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKt-rc-GaR">
@@ -157,7 +146,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="*"/>
                                 <connections>
-                                    <action selector="times:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXZ-lU-fR6"/>
+                                    <action selector="times:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iX-cW-50m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcl-Iv-Rl1">
@@ -168,7 +157,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="\"/>
                                 <connections>
-                                    <action selector="divided:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5d-5V-bYo"/>
+                                    <action selector="divided:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gLr-iv-CGe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EZ-YN-z32">
@@ -216,7 +205,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk5-HM-PVA">
-                                <rect key="frame" x="0.0" y="480" width="94" height="94"/>
+                                <rect key="frame" x="0.0" y="479" width="94" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -224,6 +213,17 @@
                                 <state key="normal" title="7"/>
                                 <connections>
                                     <action selector="n_7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0oH-fv-kd2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoC-rD-5jW">
+                                <rect key="frame" x="94" y="479" width="93" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="n_8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKo-Lp-bLg"/>
                                 </connections>
                             </button>
                         </subviews>
