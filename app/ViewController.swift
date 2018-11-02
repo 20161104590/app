@@ -144,16 +144,76 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minus(_ sender: Any) {
+        if add == 1{
+            let a = Double(result_1.text!)!
+            let b = Double(result.text!)!
+            let c = a - b
+            result_1.text = String(c)
+            result.text = ""
+            number = 2
+            re = 1
+        }else{
+            if result.text == ""{
+                result.text = "0"
+            }else {
+                let x = Double(result.text!)!
+                result_1.text = String(x)
+                result.text = ""
+                number = 2
+                re = 0
+                
+            }
+        }
         
     }
     
     
     @IBAction func times(_ sender: Any) {
+        if add == 1{
+            let a = Double(result_1.text!)!
+            let b = Double(result.text!)!
+            let c = a * b
+            result_1.text = String(c)
+            result.text = ""
+            number = 2
+            re = 1
+        }else{
+            if result.text == ""{
+                result.text = "0"
+            }else {
+                let x = Double(result.text!)!
+                result_1.text = String(x)
+                result.text = ""
+                number = 2
+                re = 0
+                
+            }
+        }
         
     }
     
  
     @IBAction func divided(_ sender: Any) {
+        if add == 1{
+            let a = Double(result_1.text!)!
+            let b = Double(result.text!)!
+            let c = a / b
+            result_1.text = String(c)
+            result.text = ""
+            number = 2
+            re = 1
+        }else{
+            if result.text == ""{
+                result.text = "0"
+            }else {
+                let x = Double(result.text!)!
+                result_1.text = String(x)
+                result.text = ""
+                number = 2
+                re = 0
+                
+            }
+        }
     }
     
   
@@ -186,6 +246,8 @@ class ViewController: UIViewController {
     
     @IBAction func clear(_ sender: Any) {
         result.text = ""
+        result_1.text = ""
+        result_2.text = ""
         plus = 0
         minus = 0
         times = 0
