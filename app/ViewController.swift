@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     var x = 0
     var number = 0
     var add = 0
-    
+    var a = 0
     @IBAction func n_1(_ sener: Any) {
         if re == 1{
             result.text = "1"
@@ -113,8 +113,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dot(_ sender: Any) {
+        
+        if a == 0 {
         result.text = result.text! + "."
         judge = 1
+        a = 1
+        }
     }
     
     
@@ -137,7 +141,7 @@ class ViewController: UIViewController {
                 result.text = ""
                 number = 1
                 re = 0
-                
+                a = 0
             }
         }
         
@@ -161,7 +165,7 @@ class ViewController: UIViewController {
                 result.text = ""
                 number = 2
                 re = 0
-                
+                a = 0
             }
         }
         
@@ -186,7 +190,7 @@ class ViewController: UIViewController {
                 result.text = ""
                 number = 3
                 re = 0
-                
+                a = 0
             }
         }
         
@@ -211,7 +215,7 @@ class ViewController: UIViewController {
                 result.text = ""
                 number = 4
                 re = 0
-                
+                a = 0
             }
         }
     }
@@ -239,6 +243,8 @@ class ViewController: UIViewController {
         }else {
             result.text = String(format:"%.0f",d)
         }
+        while (result.last == "0")
+        
         re = 1
         judge = 0
         add = 0
@@ -254,6 +260,7 @@ class ViewController: UIViewController {
         divided = 0
         re = 0
         number = 0
+        a = 0
     }
 }
 
