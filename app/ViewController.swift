@@ -126,7 +126,7 @@ class ViewController: UIViewController {
             let c = a + b
             result_1.text = String(c)
             result.text = ""
-            number = 2
+            number = 1
             re = 1
         }else{
             if result.text == ""{
@@ -135,7 +135,7 @@ class ViewController: UIViewController {
                 let x = Double(result.text!)!
                 result_1.text = String(x)
                 result.text = ""
-                number = 2
+                number = 1
                 re = 0
                 
             }
@@ -175,7 +175,7 @@ class ViewController: UIViewController {
             let c = a * b
             result_1.text = String(c)
             result.text = ""
-            number = 2
+            number = 3
             re = 1
         }else{
             if result.text == ""{
@@ -184,7 +184,7 @@ class ViewController: UIViewController {
                 let x = Double(result.text!)!
                 result_1.text = String(x)
                 result.text = ""
-                number = 2
+                number = 3
                 re = 0
                 
             }
@@ -200,7 +200,7 @@ class ViewController: UIViewController {
             let c = a / b
             result_1.text = String(c)
             result.text = ""
-            number = 2
+            number = 4
             re = 1
         }else{
             if result.text == ""{
@@ -209,7 +209,7 @@ class ViewController: UIViewController {
                 let x = Double(result.text!)!
                 result_1.text = String(x)
                 result.text = ""
-                number = 2
+                number = 4
                 re = 0
                 
             }
@@ -223,9 +223,9 @@ class ViewController: UIViewController {
         let x = Double(result_1.text!)!
         c = (result.text! as NSString).doubleValue
         if number == 1{
-            d = x - c
-        }else if number == 2{
             d = x + c
+        }else if number == 2{
+            d = x - c
         }else if number == 3{
             d = x * c
         }else if number == 4{
@@ -252,6 +252,8 @@ class ViewController: UIViewController {
         minus = 0
         times = 0
         divided = 0
+        re = 0
+        number = 0
     }
 }
 
