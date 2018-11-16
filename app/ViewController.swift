@@ -123,7 +123,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func plus(_ sender: Any) {                   //加法运算
+    @IBAction func plus(_ sender: Any) {
         if add == 1{
             let a = Double(result_1.text!)!
             let b = Double(result.text!)!
@@ -243,8 +243,13 @@ class ViewController: UIViewController {
         }else {
             result.text = String(format:"%.0f",d)
         }
-        while (result.last == "0")
         
+        while (result.text?.last == "0"){
+            result.text?.removeLast()
+        }
+        if (result.text?.last == "."){
+            result.text?.removeLast()
+        }
         re = 1
         judge = 0
         add = 0
