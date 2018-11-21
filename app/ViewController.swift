@@ -113,7 +113,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dot(_ sender: Any) {
-        
+         
         if a == 0 {
         result.text = result.text! + "."
         judge = 1
