@@ -11,17 +11,16 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var result_1: UITextField!
-    @IBOutlet weak var result_2: UITextField!
+    
     @IBOutlet weak var result: UILabel!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-    
+    var cun1 = ""
+    var cun2 = ""
     var re = 0
     var judge = 0
     var plus = 0
@@ -113,7 +112,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dot(_ sender: Any) {
-         
+        
         if a == 0 {
         result.text = result.text! + "."
         judge = 1
@@ -125,10 +124,10 @@ class ViewController: UIViewController {
     
     @IBAction func plus(_ sender: Any) {
         if add == 1{
-            let a = Double(result_1.text!)!
+            let a = Double(cun1)!
             let b = Double(result.text!)!
             let c = a + b
-            result_1.text = String(c)
+            cun1 = String(c)
             result.text = ""
             number = 1
             re = 1
@@ -137,7 +136,7 @@ class ViewController: UIViewController {
                 result.text = "0"
             }else {
                 let x = Double(result.text!)!
-                result_1.text = String(x)
+                cun1 = String(x)
                 result.text = ""
                 number = 1
                 re = 0
@@ -149,10 +148,10 @@ class ViewController: UIViewController {
     
     @IBAction func minus(_ sender: Any) {
         if add == 1{
-            let a = Double(result_1.text!)!
+            let a = Double(cun1)!
             let b = Double(result.text!)!
             let c = a - b
-            result_1.text = String(c)
+            cun1 = String(c)
             result.text = ""
             number = 2
             re = 1
@@ -161,7 +160,7 @@ class ViewController: UIViewController {
                 result.text = "0"
             }else {
                 let x = Double(result.text!)!
-                result_1.text = String(x)
+                cun1 = String(x)
                 result.text = ""
                 number = 2
                 re = 0
@@ -174,10 +173,10 @@ class ViewController: UIViewController {
     
     @IBAction func times(_ sender: Any) {
         if add == 1{
-            let a = Double(result_1.text!)!
+            let a = Double(cun1)!
             let b = Double(result.text!)!
             let c = a * b
-            result_1.text = String(c)
+            cun1 = String(c)
             result.text = ""
             number = 3
             re = 1
@@ -186,7 +185,7 @@ class ViewController: UIViewController {
                 result.text = "0"
             }else {
                 let x = Double(result.text!)!
-                result_1.text = String(x)
+                cun1 = String(x)
                 result.text = ""
                 number = 3
                 re = 0
@@ -199,10 +198,10 @@ class ViewController: UIViewController {
  
     @IBAction func divided(_ sender: Any) {
         if add == 1{
-            let a = Double(result_1.text!)!
+            let a = Double(cun1)!
             let b = Double(result.text!)!
             let c = a / b
-            result_1.text = String(c)
+            cun1 = String(c)
             result.text = ""
             number = 4
             re = 1
@@ -211,7 +210,7 @@ class ViewController: UIViewController {
                 result.text = "0"
             }else {
                 let x = Double(result.text!)!
-                result_1.text = String(x)
+                cun1 = String(x)
                 result.text = ""
                 number = 4
                 re = 0
@@ -224,7 +223,7 @@ class ViewController: UIViewController {
     @IBAction func equal(_ sender: Any) {
         var d:Double
         var c:Double
-        let x = Double(result_1.text!)!
+        let x = Double(cun1)!
         c = (result.text! as NSString).doubleValue
         if number == 1{
             d = x + c
@@ -237,13 +236,8 @@ class ViewController: UIViewController {
         }else {
             d = 1000
         }
-        result_2.text = String(c)
-        if judge == 1{
-            result.text = String(format:"%f",d)
-        }else {
-            result.text = String(format:"%.0f",d)
-        }
-        
+        cun2 = String(c)
+        result.text = String(format:"%0.8f",d)
         while (result.text?.last == "0"){
             result.text?.removeLast()
         }
@@ -257,8 +251,8 @@ class ViewController: UIViewController {
     
     @IBAction func clear(_ sender: Any) {
         result.text = ""
-        result_1.text = ""
-        result_2.text = ""
+        cun1 = ""
+        cun2 = ""
         plus = 0
         minus = 0
         times = 0
@@ -266,6 +260,9 @@ class ViewController: UIViewController {
         re = 0
         number = 0
         a = 0
+    }
+    @IBAction func aclear(_ sender: Any) {
+        result.text?.removeLast()
     }
 }
 
